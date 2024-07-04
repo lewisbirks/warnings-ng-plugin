@@ -18,6 +18,7 @@ import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
 import org.kohsuke.stapler.verb.POST;
+import org.jenkinsci.Symbol;
 import hudson.Extension;
 import hudson.model.Job;
 import hudson.model.Run;
@@ -37,8 +38,8 @@ import io.jenkins.plugins.util.JenkinsFacade;
 import static io.jenkins.plugins.analysis.core.model.ToolSelection.*;
 
 /**
- * Shows the number of issues of a job in a column of a Jenkins view. This column provides an auto-selection mode that
- * selects all tools that are available for a job. If you are interested in individual results you can also select the
+ * Shows the number of issues in a column of a Jenkins view. This column provides an auto-selection mode that
+ * selects all tools that are available for a job. If you are interested in individual results, you can also select the
  * participating tools one by one.
  *
  * @author Ullrich Hafner
@@ -60,7 +61,7 @@ public class IssuesTotalColumn extends ListViewColumn {
     }
 
     /**
-     * Called after de-serialization to retain backward compatibility..
+     * Called after deserialization to retain backward compatibility.
      *
      * @return this
      */
@@ -233,6 +234,7 @@ public class IssuesTotalColumn extends ListViewColumn {
      * @author Ulli Hafner
      */
     @Extension(optional = true)
+    @Symbol("issuesTotalColumn")
     public static class IssuesTablePortletDescriptor extends ListViewColumnDescriptor {
         @NonNull
         @Override

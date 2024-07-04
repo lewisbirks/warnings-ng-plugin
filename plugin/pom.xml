@@ -527,6 +527,7 @@
           <packages>
             <package>io.jenkins.plugins.analysis.core.scm</package>
             <package>io.jenkins.plugins.analysis.core.model</package>
+            <package>io.jenkins.plugins.analysis.core.columns</package>
             <package>io.jenkins.plugins.analysis.core.util</package>
             <package>io.jenkins.plugins.analysis.warnings</package>
           </packages>
