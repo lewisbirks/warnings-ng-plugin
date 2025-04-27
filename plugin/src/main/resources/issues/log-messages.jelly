@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:bs="/bootstrap5">
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
   <st:documentation>
     Renders info and error messages.
     <st:attribute name="messages" use="required">
@@ -13,8 +13,13 @@
   <j:if test="${size(errors) > 0}">
     <div class="row py-3">
       <div class="col">
-        <bs:card title="${%Error Messages}" fontAwesomeIcon="triangle-exclamation">
+        <j:set var="controls">
+          <div class="jenkins-card__reveal">
+            <l:icon src="symbol-warning plugin-ionicons-api"/>
+          </div>
+        </j:set>
 
+        <l:card title="${%Error Messages}" controls="${controls}">
           <pre>
             <samp id="errors" class="log-output">
               <j:forEach var="message" items="${it.errorMessages}">
@@ -24,17 +29,20 @@
               </j:forEach>
             </samp>
           </pre>
-
-        </bs:card>
+        </l:card>
       </div>
     </div>
   </j:if>
 
   <div class="row py-3">
     <div class="col">
+      <j:set var="controls">
+        <div class="jenkins-card__reveal">
+          <l:icon src="symbol-information-circle  plugin-ionicons-api"/>
+        </div>
+      </j:set>
 
-      <bs:card title="${%Information Messages}" fontAwesomeIcon="circle-info" >
-
+      <l:card title="${%Information Messages}">
         <pre>
           <samp id="info" class="log-output">
             <j:forEach var="message" items="${messages}">
@@ -44,8 +52,7 @@
             </j:forEach>
           </samp>
         </pre>
-      </bs:card>
-
+      </l:card>
     </div>
   </div>
 

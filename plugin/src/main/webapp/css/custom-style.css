@@ -97,3 +97,46 @@
 .graph-cursor-pointer {
     cursor: pointer;
 }
+
+.no-issues {
+    text-align: center;
+}
+
+.no-issues svg {
+    height: 200px;
+    width: 200px;
+    color: var(--success-color);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* Cards                                                                                                               */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+
+.ng-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.ng-cards .jenkins-card {
+    height: 100%;
+}
+
+@media (max-width: 1400px) {
+    .ng-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .ng-cards .jenkins-card {
+        min-height: 220px;
+    }
+}
+
+.ng-cards .ng-cards-one-third {
+    grid-column: span 1;
+}
+
+.ng-cards .ng-cards-two-thirds {
+    grid-column: span 2;
+}
