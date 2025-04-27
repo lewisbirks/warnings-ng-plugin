@@ -7,7 +7,7 @@
 
   <j:set var="controls">
     <div class="jenkins-card__reveal">
-      <l:icon src="symbol-trophy plugin-ionicons-api"/>
+      <l:icon src="symbol-trophy-outline plugin-ionicons-api"/>
     </div>
   </j:set>
   <l:card title="${%Congratulations}" controls="${controls}">

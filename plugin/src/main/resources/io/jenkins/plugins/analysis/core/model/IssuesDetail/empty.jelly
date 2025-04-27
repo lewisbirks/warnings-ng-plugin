@@ -2,14 +2,14 @@
 <j:jelly xmlns:j="jelly:core" xmlns:issues="/issues">
 
   <div class="ng-cards">
-    <div class="ng-cards-one-third">
+    <div class="ng-card__small">
       <issues:zero-issues/>
     </div>
-    <div class="ng-cards-two-thirds">
+    <div class="ng-card__large">
       <issues:history/>
     </div>
-  </div>
 
-  <issues:log-messages errors="${it.errorMessages}" messages="${it.infoMessages}"/>
+    <issues:log-messages errors="${it.errorMessages}" messages="${it.infoMessages}"/>
+  </div>
 
 </j:jelly>

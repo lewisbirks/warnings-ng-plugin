@@ -112,7 +112,6 @@
 /* Cards                                                                                                               */
 /* ------------------------------------------------------------------------------------------------------------------- */
 
-
 .ng-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -123,7 +122,11 @@
     height: 100%;
 }
 
-@media (max-width: 1400px) {
+.ng-cards .jenkins-card pre {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
     .ng-cards {
         display: flex;
         flex-direction: column;
@@ -133,10 +136,14 @@
     }
 }
 
-.ng-cards .ng-cards-one-third {
+.ng-card__small {
     grid-column: span 1;
 }
 
-.ng-cards .ng-cards-two-thirds {
+.ng-card__large {
     grid-column: span 2;
+}
+
+.ng-card__x-large {
+    grid-column: span 3;
 }
