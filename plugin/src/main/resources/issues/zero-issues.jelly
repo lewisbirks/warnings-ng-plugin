@@ -5,12 +5,7 @@
     Renders a bootstrap card with a zero issues message.
   </st:documentation>
 
-  <j:set var="controls">
-    <div class="jenkins-card__reveal">
-      <l:icon src="symbol-trophy-outline plugin-ionicons-api"/>
-    </div>
-  </j:set>
-  <l:card title="${%Congratulations}" controls="${controls}">
+  <l:card title="${%Congratulations}">
     <div class="no-issues">
       <l:icon src="symbol-checkmark-done-outline plugin-ionicons-api" />
       <h5>${%congratulations}</h5>

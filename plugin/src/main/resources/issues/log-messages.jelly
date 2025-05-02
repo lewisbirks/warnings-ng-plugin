@@ -12,13 +12,7 @@
 
   <j:if test="${size(errors) > 0}">
     <div class="ng-card__x-large">
-      <j:set var="controls">
-        <div class="jenkins-card__reveal">
-          <l:icon src="symbol-warning-outline plugin-ionicons-api"/>
-        </div>
-      </j:set>
-
-      <l:card title="${%Error Messages}" controls="${controls}">
+      <l:card title="${%Error Messages}">
         <pre>
           <samp id="errors" class="log-output">
             <j:forEach var="message" items="${it.errorMessages}">
@@ -33,12 +27,6 @@
   </j:if>
 
   <div class="ng-card__x-large">
-    <j:set var="controls">
-      <div class="jenkins-card__reveal">
-        <l:icon src="symbol-information-circle-outline plugin-ionicons-api"/>
-      </div>
-    </j:set>
-
     <l:card title="${%Information Messages}">
       <pre>
         <samp id="info" class="log-output">
